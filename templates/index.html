@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实时视频流</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../static/scripts.js" defer></script>
+    <script>
+
+        function switchCamera() {
+            fetch('/switch_camera', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Switched to camera index:', data.camera_index);
+                    // 重新加载视频流
+                    document.querySelector('.video-frame[src*="video_feed_original"]').src = "{{ url_for('video_feed_original') }}?" + new Date().getTime();
+                    document.querySelector('.video-frame[src*="video_feed_pseudocolor"]').src = "{{ url_for('video_feed_pseudocolor') }}?" + new Date().getTime();
+                });
+        }
+    </script>
+</head>
+<body>
+<h1></h1>
+<div class="video-container">
+    <div>
+        <h2>原始视频</h2>
+        <img class="video-frame" src="{{ url_for('video_feed_original') }}" alt="Original Video">
+    </div>
+    <div>
+        <h2>伪彩色视频</h2>
+        <img class="video-frame" src="{{ url_for('video_feed_pseudocolor') }}" alt="Pseudocolor Video">
+    </div>
+</div>
+
+<!-- 火焰参数显示 -->
+<div style="text-align: center; margin-top: 1px;">
+    <h2>火焰参数</h2>
+    <p>燃烧运行信号: <span id="flame_signal">0</span>%
+    燃烧稳定性系数: <span id="flame_stability">0</span>%
+    火焰长度: <span id="flame_length">0</span></p>
+    <p>火焰宽度: <span id="flame_width">0</span>
+    火焰有效面积: <span id="flame_area">0</span>
+    火焰平均温度: <span id="average_temp">0</span></p>
+</div>
+
+<!-- 火焰柱状图 -->
+<div class="chart-container">
+    <canvas id="flameChart"></canvas>
+</div>
+<!-- 添加录制按钮 -->
+<div style="text-align: center; margin-top: 20px;">
+    <button id="recordBtn" onclick="toggleRecording()">开始录制</button>
+    <button onclick="switchCamera()">切换摄像头</button>
+</div>
+</body>
+</html>
