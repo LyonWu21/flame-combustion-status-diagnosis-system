@@ -1,3 +1,4 @@
+# 基于Python Web的燃烧状态诊断系统
 # Version
 ### 9.2
 - 选题
@@ -55,15 +56,16 @@
 **Flask:**\
 The method is not allowed for the requested URL.\
 405 Method Not Allowed\
+
 **Python:**\
 json.loads(),Read JSON file using Python\
 How to do Python or Flask Debug\
 Jetbrains IDE Plugin Installation Error java.nio.file.AccessDeniedException: https://blog.csdn.net/u014414331/article/details/140446188\
-'list' object has no attribute 'get'
-
+'list' object has no attribute 'get'\
+python global\
+https://stackoverflow.com/questions/68923157/call-obsstudio-virtual-camera-in-python\
 
 **Web:**\
 Stream video from OpenCV to Web Browser\
 https://github.com/pornpasok/opencv-stream-video-to-web\
-一样的脚本放在html中就有用，但是单独放在js文件中就失效了，怀疑是参数传递的问\
-还有是否添加defer也会对脚本渲染有影响
+前端实现播放实时监控视频笔记(hls http-flv)https://blog.csdn.net/u012961419/article/details/120491439\
