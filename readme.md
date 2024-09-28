@@ -1,5 +1,6 @@
 # 基于Python Web的燃烧状态诊断系统
-# Version
+本项目是一个基于Python Web的燃烧状态诊断系统，通过摄像头实时监控火焰燃烧状态，通过视频处理技术提取火焰的特征参数，如燃烧信号、稳定性、温度等，实现对火焰燃烧状态的实时监控和诊断，最后实现了前端界面。
+# 过程
 ### 9.2
 - 选题
 ### 9.3
@@ -48,24 +49,25 @@
   * 尝试用两个函数处理两个视频流
   * 尝试一个函数返回两个视频流
   * ![img.png](img.png)
-# GET
-* The relation between css,js, and html
-  * css: style js: function html: content 
-  * HTML is used to create the structure of the page, css is used to style the page, and js is used to add interactivity to the page. of course, you can contain css and js in html, but it is not recommended.
-# Question
+# 收获
+* 学习到了CSS,HTML,JS的基本知识
+  * HTML是用来创建页面结构的，css是用来给页面添加样式的，js是用来给页面添加交互性的。当然，你可以将css和js包含在html中，但不推荐这样做。
+# 遇到的问题
 **Flask:**\
-The method is not allowed for the requested URL.\
-405 Method Not Allowed\
+* The method is not allowed for the requested URL.\
+* 405 Method Not Allowed\
 
 **Python:**\
-json.loads(),Read JSON file using Python\
-How to do Python or Flask Debug\
-Jetbrains IDE Plugin Installation Error java.nio.file.AccessDeniedException: https://blog.csdn.net/u014414331/article/details/140446188\
-'list' object has no attribute 'get'\
-python global\
-https://stackoverflow.com/questions/68923157/call-obsstudio-virtual-camera-in-python\
+* json.loads(),Read JSON file using Python\
+* How to do Python or Flask Debug\
+* Jetbrains IDE Plugin Installation Error java.nio.file.AccessDeniedException: https://blog.csdn.net/u014414331/article/details/140446188\
+* 'list' object has no attribute 'get'\
+* python global\
+* https://stackoverflow.com/questions/68923157/call-obsstudio-virtual-camera-in-python\
 
 **Web:**\
-Stream video from OpenCV to Web Browser\
-https://github.com/pornpasok/opencv-stream-video-to-web\
-前端实现播放实时监控视频笔记(hls http-flv)https://blog.csdn.net/u012961419/article/details/120491439\
+* Stream video from OpenCV to Web Browser\
+* https://github.com/pornpasok/opencv-stream-video-to-web\
+* 前端实现播放实时监控视频笔记(hls http-flv)https://blog.csdn.net/u012961419/article/details/120491439\
+* 一样的脚本放在html中就有用，但是单独放在js文件中就失效了，怀疑是参数传递的问题\
+* 还有是否添加defer也会对脚本渲染有影响
