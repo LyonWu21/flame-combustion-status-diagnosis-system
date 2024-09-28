@@ -53,21 +53,21 @@
 * 学习到了CSS,HTML,JS的基本知识
   * HTML是用来创建页面结构的，css是用来给页面添加样式的，js是用来给页面添加交互性的。当然，你可以将css和js包含在html中，但不推荐这样做。
 # 遇到的问题
-**Flask:**\
-* The method is not allowed for the requested URL.\
-* 405 Method Not Allowed\
+**Flask:**
+* The method is not allowed for the requested URL.
+* 405 Method Not Allowed
 
-**Python:**\
-* json.loads(),Read JSON file using Python\
-* How to do Python or Flask Debug\
-* Jetbrains IDE Plugin Installation Error java.nio.file.AccessDeniedException: https://blog.csdn.net/u014414331/article/details/140446188\
-* 'list' object has no attribute 'get'\
-* python global\
-* https://stackoverflow.com/questions/68923157/call-obsstudio-virtual-camera-in-python\
+**Python:**
+* json.loads(),Read JSON file using Python
+* How to do Python or Flask Debug
+* Jetbrains IDE Plugin Installation Error java.nio.file.AccessDeniedException: https://blog.csdn.net/u014414331/article/details/140446188
+* 'list' object has no attribute 'get'
+* python global
+* https://stackoverflow.com/questions/68923157/call-obsstudio-virtual-camera-in-python
 
 **Web:**\
-* Stream video from OpenCV to Web Browser\
-* https://github.com/pornpasok/opencv-stream-video-to-web\
-* 前端实现播放实时监控视频笔记(hls http-flv)https://blog.csdn.net/u012961419/article/details/120491439\
-* 一样的脚本放在html中就有用，但是单独放在js文件中就失效了，怀疑是参数传递的问题\
+* Stream video from OpenCV to Web Browser
+* https://github.com/pornpasok/opencv-stream-video-to-web
+* 前端实现播放实时监控视频笔记(hls http-flv)https://blog.csdn.net/u012961419/article/details/120491439
+* 一样的脚本放在html中就有用，但是单独放在js文件中就失效了，怀疑是参数传递的问题
 * 还有是否添加defer也会对脚本渲染有影响
